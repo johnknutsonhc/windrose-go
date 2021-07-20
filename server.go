@@ -25,6 +25,8 @@ func windrose(w http.ResponseWriter, req *http.Request) {
 		// TODO: what here?
 		panic(err)
 	}
+	w.Header().Set("Content-Type", "image/svg+xml")
+	// w.Header().Set("Windrose-Angle-Deg", string(angleDeg))
 	fmt.Fprintf(w, svgWindroseBuf.String())
 }
 
