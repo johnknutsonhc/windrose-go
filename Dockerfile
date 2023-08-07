@@ -12,5 +12,5 @@ USER $APP_USER
 WORKDIR $APP_HOME
 COPY . .
 RUN go build -o ./windrose-go .
-EXPOSE 8090
+EXPOSE 8080
 CMD ["./windrose-go"]
