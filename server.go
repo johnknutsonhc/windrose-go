@@ -33,5 +33,5 @@ func windrose(w http.ResponseWriter, req *http.Request) {
 func main() {
 	http.HandleFunc("/windrose", windrose)
 
-	http.ListenAndServe(":8090", nil)
+	http.ListenAndServe(":8080", nil)
 }
