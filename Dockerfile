@@ -11,6 +11,6 @@ RUN mkdir -p $APP_HOME && chown -R $APP_USER:$APP_USER $APP_HOME
 USER $APP_USER
 WORKDIR $APP_HOME
 COPY . .
-RUN go build .
+RUN go build -o ./windrose-go .
 EXPOSE 8090
 CMD ["./windrose-go"]
