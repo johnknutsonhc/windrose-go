@@ -6,7 +6,7 @@ ENV APP_USER app
 ENV APP_HOME /go/src/windrose-go
 ARG GROUP_ID=1001
 ARG USER_ID=1001
-RUN groupadd --gid $GROUP_ID && useradd -m -l --uid $USER_ID --gid $GROUP_ID $APP_USER
+RUN groupadd --gid $GROUP_ID app && useradd -m -l --uid $USER_ID --gid $GROUP_ID $APP_USER
 RUN mkdir -p $APP_HOME && chown -R $APP_USER:$APP_USER $APP_HOME
 USER $APP_USER
 WORKDIR $APP_HOME
