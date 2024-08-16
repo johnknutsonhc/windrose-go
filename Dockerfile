@@ -1,4 +1,4 @@
-FROM golang:1.16.5-buster
+FROM golang:1.23-bookworm
 # RUN go get -u github.com/jknutson/windrose-go
 ENV GO111MODULE=on
 ENV GOFLAGS=-mod=vendor
