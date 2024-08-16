@@ -1,0 +1,3 @@
+version: v1.1.0
+steps:
+  - cmd: docker.io/checkmarx/kics:latest
