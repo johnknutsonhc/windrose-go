@@ -1,0 +1,34 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "16:00"
+    ignore:
+      - dependency-name: "HennepinCounty/cloudops"
+    # reviewers:
+    #   - "HennepinCounty/cloud-ops"
+    groups:
+      gomod-dependencies:
+        update-types:
+          - "major"
+          - "minor"
+          - "patch"
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "16:00"
+    ignore:
+      - dependency-name: "HennepinCounty/cloudops"
+    reviewers:
+      - "HennepinCounty/cloud-ops"
+    groups:
+      actions-dependencies:
+        update-types:
+          - "major"
+          - "minor"
+          - "patch"
