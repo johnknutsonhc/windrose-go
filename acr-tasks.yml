@@ -1,8 +1,8 @@
 version: v1.1.0
 steps:
   - build: -t $Registry/windrose-go:$ID -t $Registry/windrose-go:latest .
-  # - cmd: docker.io/checkmarx/kics:latest scan -p /
-  - cmd: bash pwd && ls -l
+  - cmd: docker.io/checkmarx/kics:latest scan -p /workspace
+  # - cmd: bash pwd && ls -l
   - push:
     - $Registry/windrose-go:$ID
     - $Registry/windrose-go:latest
