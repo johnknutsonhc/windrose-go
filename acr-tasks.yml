@@ -1,6 +1,6 @@
 version: v1.1.0
 steps:
-  - build: -t $Registry/windrose-go:$ID -f Dockerfile .
+  - build: -t $Registry/windrose-go:$ID -t $Registry/windrose-go:latest .
   - cmd: docker.io/checkmarx/kics:latest scan
   - push:
     - $Registry/windrose-go:$ID
