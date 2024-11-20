@@ -14,6 +14,6 @@ WORKDIR $APP_HOME
 COPY . .
 RUN go build -buildvcs=false -o ./windrose-go .
 EXPOSE 8080
-HEALTHCHECK --interval=5m --timeout=3s \
-  CMD curl -f http://localhost:8080/windrose || exit 1
+# HEALTHCHECK --interval=5m --timeout=3s \
+#   CMD curl -f http://localhost:8080/windrose || exit 1
 CMD ["./windrose-go"]
